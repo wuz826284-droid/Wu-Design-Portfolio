@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Wujiao Ting Portfolio",
+  "description": "A high-fidelity design and development portfolio featuring branding, packaging, and font design projects with a striking neon green and brutalist aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
