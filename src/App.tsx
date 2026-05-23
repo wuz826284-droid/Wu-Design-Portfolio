@@ -387,7 +387,7 @@ export default function App() {
       title: title,
       category: title.toUpperCase(),
       time: "2020 - 2026",
-      image: "/assets/images/uploaded_1779500610609______.png",
+      image: "/assets/images/uploaded_1779532286287______.png",
       description: `深耕${title}创意，融合先锋物理渲染与人文感知底色。`,
       tags: [tagVal],
       subProjects: [
@@ -395,7 +395,7 @@ export default function App() {
           title: `默认${title}作品`,
           tag: tagVal,
           description: `为【${title}】分类新建的初始子项目。您可以通过编辑更改此文字。`,
-          images: ["/assets/images/uploaded_1779500610609______.png"]
+          images: ["/assets/images/uploaded_1779532286287______.png"]
         }
       ]
     };
@@ -425,7 +425,7 @@ export default function App() {
       title: "全新概念展示项目",
       tag: selectedProject.tags[0] || "其他",
       description: "在这里输入专业的项目介绍、调色以及物理几何工艺详情描述...",
-      images: ["/assets/images/uploaded_1779500610609______.png"]
+      images: ["/assets/images/uploaded_1779532286287______.png"]
     });
   };
 

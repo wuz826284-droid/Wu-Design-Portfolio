@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const referencedFiles = [
+// Dynamically determine referenced files by scanning codebase
+const referencedFiles = new Set([
   'regenerated_image_1779408921933.png',
   'regenerated_image_1779409373917.png',
   'regenerated_image_1779409409989.png',
@@ -18,7 +19,60 @@ const referencedFiles = [
   'regenerated_image_1779408918460.png',
   'work_insights_illustrations_1779410458171.png',
   'regenerated_image_1778551850611.png'
-];
+]);
+
+// 1. Scan src/portfolio-data.json for references
+try {
+  const portfolioPath = path.join(__dirname, '..', 'src', 'portfolio-data.json');
+  if (fs.existsSync(portfolioPath)) {
+    const content = fs.readFileSync(portfolioPath, 'utf8');
+    const matches = content.match(/\/assets\/images\/[^"'\s]+/g);
+    if (matches) {
+      matches.forEach(match => {
+        const filename = path.basename(match);
+        referencedFiles.add(filename);
+      });
+    }
+  }
+} catch (e) {
+  console.error('Error scanning portfolio-data.json:', e);
+}
+
+// 2. Scan src/App.tsx for references
+try {
+  const appPath = path.join(__dirname, '..', 'src', 'App.tsx');
+  if (fs.existsSync(appPath)) {
+    const content = fs.readFileSync(appPath, 'utf8');
+    const matches = content.match(/\/assets\/images\/[^"'\s{}()]+/g);
+    if (matches) {
+      matches.forEach(match => {
+        const filename = path.basename(match);
+        referencedFiles.add(filename);
+      });
+    }
+  }
+} catch (e) {
+  console.error('Error scanning App.tsx:', e);
+}
+
+// 3. Scan src/image-overrides.json for references
+try {
+  const overridesPath = path.join(__dirname, '..', 'src', 'image-overrides.json');
+  if (fs.existsSync(overridesPath)) {
+    const content = fs.readFileSync(overridesPath, 'utf8');
+    const matches = content.match(/\/assets\/images\/[^"'\s]+/g);
+    if (matches) {
+      matches.forEach(match => {
+        const filename = path.basename(match);
+        referencedFiles.add(filename);
+      });
+    }
+  }
+} catch (e) {
+  console.error('Error scanning image-overrides.json:', e);
+}
+
+console.log(`Detected ${referencedFiles.size} referenced images from code scanning.`);
 
 function cleanDir(dir) {
   if (!fs.existsSync(dir)) return;
@@ -33,7 +87,7 @@ function cleanDir(dir) {
       }
     } else if (ent.isFile()) {
       const filename = ent.name;
-      if (!referencedFiles.includes(filename)) {
+      if (!referencedFiles.has(filename)) {
         console.log(`Deleting unreferenced file: ${fullPath}`);
         fs.unlinkSync(fullPath);
       }
