@@ -26,7 +26,7 @@ try {
   const portfolioPath = path.join(__dirname, '..', 'src', 'portfolio-data.json');
   if (fs.existsSync(portfolioPath)) {
     const content = fs.readFileSync(portfolioPath, 'utf8');
-    const matches = content.match(/\/assets\/images\/[^"'\s]+/g);
+    const matches = content.match(/(?:\/)?assets\/images\/[^"'\s]+/g);
     if (matches) {
       matches.forEach(match => {
         const filename = path.basename(match);
@@ -43,7 +43,7 @@ try {
   const appPath = path.join(__dirname, '..', 'src', 'App.tsx');
   if (fs.existsSync(appPath)) {
     const content = fs.readFileSync(appPath, 'utf8');
-    const matches = content.match(/\/assets\/images\/[^"'\s{}()]+/g);
+    const matches = content.match(/(?:\/)?assets\/images\/[^"'\s{}()]+/g);
     if (matches) {
       matches.forEach(match => {
         const filename = path.basename(match);
@@ -60,7 +60,7 @@ try {
   const overridesPath = path.join(__dirname, '..', 'src', 'image-overrides.json');
   if (fs.existsSync(overridesPath)) {
     const content = fs.readFileSync(overridesPath, 'utf8');
-    const matches = content.match(/\/assets\/images\/[^"'\s]+/g);
+    const matches = content.match(/(?:\/)?assets\/images\/[^"'\s]+/g);
     if (matches) {
       matches.forEach(match => {
         const filename = path.basename(match);
