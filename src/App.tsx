@@ -840,15 +840,15 @@ export default function App() {
               >
                 <div className="aspect-[3/4] bg-neutral-50 overflow-hidden relative group border border-neutral-200/40">
                   <img 
-                    src={getOverriddenImg("/assets/images/uploaded_1779500554610_____________________________________________________.png")} 
+                    src={getOverriddenImg("/assets/images/uploaded_1779532213160_____________________________________________________.png")} 
                     alt="Portrait"
                     className="w-full h-full object-cover grayscale transition-all duration-700 hover:grayscale-0 group-hover:grayscale-0 hover:scale-105 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   {isAdmin && (
                     <ImageUploadOverlay 
-                      originalUrl="/assets/images/uploaded_1779500554610_____________________________________________________.png"
-                      onUploaded={(url) => handleImageUploaded("/assets/images/uploaded_1779500554610_____________________________________________________.png", url)}
+                      originalUrl="/assets/images/uploaded_1779532213160_____________________________________________________.png"
+                      onUploaded={(url) => handleImageUploaded("/assets/images/uploaded_1779532213160_____________________________________________________.png", url)}
                     />
                   )}
                   <div className="absolute inset-0 bg-black/[0.02] pointer-events-none" />
