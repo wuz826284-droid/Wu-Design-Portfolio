@@ -24,6 +24,14 @@ import {
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "motion/react";
 import defaultOverrides from "./image-overrides.json";
+import portfolioItems from "./portfolio-data.json";
+import { isFirebaseEnabled } from "./firebase";
+import {
+  fetchLivePortfolio,
+  saveFullPortfolio,
+  fetchLiveOverrides,
+  saveLiveOverride
+} from "./firebaseSync";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -38,161 +46,6 @@ const staggerChildren = {
     }
   }
 };
-
-// Portfolio Data
-const portfolioItems = [
-  { 
-    id: "graphic",
-    part: "01", 
-    title: "平面视觉", 
-    category: "BRAND", 
-    time: "2020 - 2025", 
-    image: "/assets/images/uploaded_1779500610609______.png",
-    description: "深耕各类商业静态视觉创作，统筹版式排版与视觉调性，兼顾实用价值与整体美感。",
-    tags: ["企业画册", "商业海报", "电商主图详情页"],
-    subProjects: [
-      {
-        title: "工业防护涂料宣传册",
-        tag: "企业画册",
-        description: "为工业防护涂料知名品牌（大连万信）打造的百年企宣创意画册设计。排版选用稳重严谨的栅格，搭配极富表现力的荧光色度与精致排字规范，达成卓越的易读性与时代力量表现。",
-        images: [
-          "/assets/images/uploaded_1779500610609______.png",
-          "/assets/images/uploaded_1779500930070_________2.png",
-          "/assets/images/uploaded_1779500976085______.png",
-          "/assets/images/uploaded_1779501056493______2.png"
-        ]
-      },
-      {
-        title: "抗划痕面漆三折页",
-        tag: "企业画册",
-        description: "为工业防护涂料知名品牌特制的抗划痕面漆定制三折页画册宣传册设计。排版融合极致的科技感与清晰的数据信息层级，全方位突显其卓越的耐划伤和耐磨损核心卖点。",
-        images: [
-          "/assets/images/uploaded_1779501071246_Mockup.png",
-          "/assets/images/uploaded_1779501086570_Mockup3.png",
-          "/assets/images/uploaded_1779501115640_Mockup2.png"
-        ]
-      },
-      {
-        title: "LUMISA烫印箔宣传单",
-        tag: "商业海报",
-        description: "富有艺术表现力的商业品宣海报。采用高品质局部色块冲突，融合解构几何形态排版，适合在实体橱窗、展览以及社交媒体端作为吸睛宣传视觉面世。",
-        images: [
-          "/assets/images/uploaded_1779501147394_Mockup3.png",
-          "/assets/images/uploaded_1779501186736_Mockup2.png"
-        ]
-      },
-      {
-        title: "ERP系统登陆界面",
-        tag: "电商主图详情页",
-        description: "专为精细艺术品及奢品多端详情适配研发的交互型排版陈列方案。针对微小光源阴影和材质边缘实施次像素修整，营造一流的商业转化拉力。",
-        images: [
-          "/assets/images/uploaded_1779501231251_Landscape.png",
-          "/assets/images/uploaded_1779501404448_Mockup.png"
-        ]
-      }
-    ]
-  },
-  { 
-    id: "video",
-    part: "02", 
-    title: "视频剪辑", 
-    category: "VIDEO", 
-    time: "2020 - 2025", 
-    image: "/assets/images/regenerated_image_1777987826245.png",
-    description: "拿捏画面节奏与叙事氛围，用镜头语言把创意做成鲜活可感的动态表达。",
-    tags: ["品牌宣传短片", "产品介绍视频", "创意动态内容"],
-    subProjects: [
-      {
-        title: "数字光彩多维潮流品牌宣传片",
-        tag: "品牌宣传短片",
-        description: "精细剪辑与流光调色。融注灵动的情感脉络，全方位彰显数字潮牌在多元时空维度的创新面貌与叙事温度。",
-        images: [
-          "/assets/images/regenerated_image_1777987826245.png",
-          "/assets/images/downloaded_1779502101022_0.jpg"
-        ]
-      },
-      {
-        title: "极简概念智能终端商业解析视频",
-        tag: "产品介绍视频",
-        description: "高端灰度质感与微距近景跟焦。用动态流体分镜和机械组装拆解，极其专业地雕刻产品的前沿硬核构造与核心卖点。",
-        images: [
-          "/assets/images/downloaded_1779502101053_1.jpg",
-          "/assets/images/downloaded_1779502102878_7.jpg"
-        ]
-      },
-      {
-        title: "流体渲染特效社媒运营微动效",
-        tag: "创意动态内容",
-        description: "专为短格式社媒宣发定制的高清动态视频切片。节奏紧凑欢快，动感剪帧，能瞬间捕获观者的指尖注意力。",
-        images: [
-          "/assets/images/downloaded_1779502102861_6.jpg",
-          "/assets/images/downloaded_1779502101022_0.jpg"
-        ]
-      }
-    ]
-  },
-  { 
-    id: "space",
-    part: "03", 
-    title: "空间视觉", 
-    category: "SPACE", 
-    time: "2020 - 2025", 
-    image: "/assets/images/uploaded_1779501868982_630e95b66319f0be881b0f2966f0df69.jpg",
-    description: "跳出纸面，让平面创意走进真实场景，落地成可触摸、可感知的实体视觉作品。",
-    tags: ["线下主题展板", "企业文化墙"],
-    subProjects: [
-      {
-        title: "黄色星斑手造物理陈列空间美学",
-        tag: "线下主题展板",
-        description: "通过经典的暖黄色物理空间造景，将手造玻璃的纹路、色泽极佳地呼应到现代极简场馆布置中，开辟沉浸感卓越的实体感知场域。",
-        images: [
-          "/assets/images/uploaded_1779501868982_630e95b66319f0be881b0f2966f0df69.jpg",
-          "/assets/images/regenerated_image_1778157281116.png",
-          "/assets/images/downloaded_1779502102918_8.jpg"
-        ]
-      },
-      {
-        title: "科技园区立体模块企业发展文化墙",
-        tag: "企业文化墙",
-        description: "现代主义几何立体展陈墙设计。让枯燥的数据和漫长的企业成长时间线跃然墙面，营造出兼具人文色彩与先锋气质的参观动线重点。",
-        images: [
-          "/assets/images/downloaded_1779502102878_7.jpg",
-          "/assets/images/downloaded_1779502102861_6.jpg"
-        ]
-      }
-    ]
-  },
-  { 
-    id: "multi",
-    part: "04", 
-    title: "多元设计", 
-    category: "MULTI", 
-    time: "2020 - 2025", 
-    image: "/assets/images/regenerated_image_1777987878599.png",
-    description: "不被单一领域定义，自由探索不同媒介的创作可能，展现多维度的综合设计能力。",
-    tags: ["原创 IP 形象设计", "三维建模"],
-    subProjects: [
-      {
-        title: "彩色流体IP潮流玩具主形象设计",
-        tag: "原创 IP 形象设计",
-        description: "混彩潮流IP酷酷公仔形象。在三维数字模型中运用极致渲染器打磨其流体高反光复合材质，展示多维度的街头波普新锐风格。",
-        images: [
-          "/assets/images/regenerated_image_1777987878599.png",
-          "/assets/images/downloaded_1779502102861_6.jpg"
-        ]
-      },
-      {
-        title: "超写实物理质感金属与水晶三维解析",
-        tag: "三维建模",
-        description: "次世代三维写实质感渲染。利用高级多层光遮蔽材质，模拟冰冷合金与澄透结晶的物理共生，呈现出太空歌剧和科幻感满溢的微观艺术雕塑。",
-        images: [
-          "/assets/images/downloaded_1779502102878_7.jpg",
-          "/assets/images/downloaded_1779502102918_8.jpg"
-        ]
-      }
-    ]
-  },
-];
 
 const compressImage = (base64Str: string, maxDimension = 2400, quality = 0.92): Promise<string> => {
   return new Promise((resolve) => {
@@ -372,16 +225,26 @@ export default function App() {
 
   // GET Overrides on start and portfolio synchronizer sync
   useEffect(() => {
-    // 1. Fetch overrides
-    fetch("/api/overrides")
-      .then((res) => {
-        if (!res.ok) throw new Error("Sync failed");
-        return res.json();
-      })
-      .then((data) => {
-        if (data && typeof data === "object") {
+    const bootstrapData = async () => {
+      // 1. Fetch overrides
+      let baseOverrides = { ...defaultOverrides };
+      try {
+        const res = await fetch("/api/overrides");
+        if (res.ok) {
+          const serverData = await res.json();
+          if (serverData && typeof serverData === "object") {
+            baseOverrides = { ...baseOverrides, ...serverData };
+          }
+        }
+      } catch (err) {
+        console.log("Local static overrides loaded:", err);
+      }
+
+      if (isFirebaseEnabled) {
+        try {
+          const liveDocOverrides = await fetchLiveOverrides(baseOverrides);
           setImageOverrides((prev) => {
-            const merged = { ...prev, ...data };
+            const merged = { ...prev, ...liveDocOverrides };
             try {
               localStorage.setItem("wujiao_portfolio_image_overrides", JSON.stringify(merged));
             } catch (e) {
@@ -389,29 +252,58 @@ export default function App() {
             }
             return merged;
           });
+        } catch (err) {
+          console.warn("Firestore overrides sync failed, using static values:", err);
         }
-      })
-      .catch((err) => console.log("Standalone/offline local configuration loaded. Server sync omitted:", err));
+      } else {
+        setImageOverrides((prev) => {
+          const merged = { ...prev, ...baseOverrides };
+          try {
+            localStorage.setItem("wujiao_portfolio_image_overrides", JSON.stringify(merged));
+          } catch (e) {
+            console.error(e);
+          }
+          return merged;
+        });
+      }
 
-    // 2. Fetch live global portfolio database
-    fetch("/api/portfolio")
-      .then((res) => {
-        if (!res.ok) throw new Error("Portfolio dynamic fetch failed");
-        return res.json();
-      })
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setProjects(data);
+      // 2. Fetch live global portfolio database
+      if (isFirebaseEnabled) {
+        try {
+          const dbPortfolio = await fetchLivePortfolio(portfolioItems);
+          setProjects(dbPortfolio);
+        } catch (err) {
+          console.warn("Firestore portfolio fetch failed, falling back to JSON:", err);
+          setProjects(portfolioItems);
         }
-      })
-      .catch((err) => console.log("Failed loading portfolio data from backend:", err));
+      } else {
+        try {
+          const res = await fetch("/api/portfolio");
+          if (res.ok) {
+            const serverData = await res.json();
+            if (Array.isArray(serverData)) {
+              setProjects(serverData);
+            } else {
+              setProjects(portfolioItems);
+            }
+          } else {
+            setProjects(portfolioItems);
+          }
+        } catch (err) {
+          console.log("Failed loading portfolio database from backend, using local defaults:", err);
+          setProjects(portfolioItems);
+        }
+      }
+    };
+
+    bootstrapData();
   }, []);
 
   const getOverriddenImg = (url: string): string => {
     return imageOverrides[url] || url;
   };
 
-  const handleImageUploaded = (originalUrl: string, uploadedUrl: string) => {
+  const handleImageUploaded = async (originalUrl: string, uploadedUrl: string) => {
     const updated = { ...imageOverrides, [originalUrl]: uploadedUrl };
     setImageOverrides(updated);
     try {
@@ -419,12 +311,31 @@ export default function App() {
     } catch (e) {
       console.error("Failed to save overrides:", e);
     }
+
+    if (isFirebaseEnabled) {
+      try {
+        await saveLiveOverride(originalUrl, uploadedUrl);
+      } catch (err) {
+        console.error("Failsafe firestore override propagation bypassed:", err);
+      }
+    }
   };
 
   // POST Global synchronizer
   const savePortfolio = async (updatedProjects: any[]) => {
     setIsSaving(true);
     try {
+      // 1. Sync with Firestore first (single source of truth)
+      let firestoreSucess = false;
+      if (isFirebaseEnabled) {
+        try {
+          firestoreSucess = await saveFullPortfolio(updatedProjects);
+        } catch (err) {
+          console.error("Firestore persistence failed:", err);
+        }
+      }
+
+      // 2. Fallback upload to server backend (writes to file if on local or backup)
       const response = await fetch("/api/portfolio", {
         method: "POST",
         headers: {
@@ -436,10 +347,11 @@ export default function App() {
         }),
       });
       const data = await response.json();
-      if (data.success) {
+      
+      if (data.success || firestoreSucess) {
         setProjects(updatedProjects);
       } else {
-        alert("保存失败: " + (data.error || "未知错误"));
+        alert("保存失败: " + (data.error || "未知服务器响应"));
       }
     } catch (e: any) {
       console.error("Save portfolio failed:", e);
@@ -1033,7 +945,7 @@ export default function App() {
       </div>
 
         {/* Scrolling Marquee */}
-        <div className="relative z-30 mt-12 -mb-24 overflow-hidden py-12 pointer-events-none">
+        <div className="relative z-30 -mt-4 -mb-24 overflow-hidden py-12 pointer-events-none">
           <div className="bg-black py-6 -rotate-2 scale-105 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative">
             <motion.div 
               className="flex whitespace-nowrap"
@@ -1079,7 +991,7 @@ export default function App() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-150px" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-black py-24 px-6 md:px-12 scroll-mt-20 max-w-[1400px] mx-auto rounded-[60px] mt-4 shadow-xl relative z-20 overflow-hidden"
+          className="bg-black py-24 px-6 md:px-12 scroll-mt-20 max-w-[1400px] mx-auto rounded-[60px] mt-12 shadow-xl relative z-20 overflow-hidden"
         >
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-24 items-stretch">
