@@ -300,7 +300,19 @@ export default function App() {
   }, []);
 
   const getOverriddenImg = (url: string): string => {
-    return imageOverrides[url] || url;
+    if (!url) return "";
+    if (url.startsWith("data:")) return url;
+
+    const withSlash = url.startsWith("/") ? url : "/" + url;
+    const withoutSlash = url.startsWith("/") ? url.slice(1) : url;
+
+    const override = imageOverrides[withSlash] || imageOverrides[withoutSlash] || imageOverrides[url];
+    if (override) {
+      if (override.startsWith("data:")) return override;
+      return override.startsWith("/") ? override.slice(1) : override;
+    }
+
+    return withoutSlash;
   };
 
   const handleImageUploaded = async (originalUrl: string, uploadedUrl: string) => {
@@ -387,7 +399,7 @@ export default function App() {
       title: title,
       category: title.toUpperCase(),
       time: "2020 - 2026",
-      image: "/assets/images/uploaded_1779532286287______.png",
+      image: "assets/images/uploaded_1779532286287______.png",
       description: `深耕${title}创意，融合先锋物理渲染与人文感知底色。`,
       tags: [tagVal],
       subProjects: [
@@ -395,7 +407,7 @@ export default function App() {
           title: `默认${title}作品`,
           tag: tagVal,
           description: `为【${title}】分类新建的初始子项目。您可以通过编辑更改此文字。`,
-          images: ["/assets/images/uploaded_1779532286287______.png"]
+          images: ["assets/images/uploaded_1779532286287______.png"]
         }
       ]
     };
@@ -425,7 +437,7 @@ export default function App() {
       title: "全新概念展示项目",
       tag: selectedProject.tags[0] || "其他",
       description: "在这里输入专业的项目介绍、调色以及物理几何工艺详情描述...",
-      images: ["/assets/images/uploaded_1779532286287______.png"]
+      images: ["assets/images/uploaded_1779532286287______.png"]
     });
   };
 
@@ -840,15 +852,15 @@ export default function App() {
               >
                 <div className="aspect-[3/4] bg-neutral-50 overflow-hidden relative group border border-neutral-200/40">
                   <img 
-                    src={getOverriddenImg("/assets/images/uploaded_1779532213160_____________________________________________________.png")} 
+                    src={getOverriddenImg("assets/images/uploaded_1779532213160_____________________________________________________.png")} 
                     alt="Portrait"
                     className="w-full h-full object-cover grayscale transition-all duration-700 hover:grayscale-0 group-hover:grayscale-0 hover:scale-105 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   {isAdmin && (
                     <ImageUploadOverlay 
-                      originalUrl="/assets/images/uploaded_1779532213160_____________________________________________________.png"
-                      onUploaded={(url) => handleImageUploaded("/assets/images/uploaded_1779532213160_____________________________________________________.png", url)}
+                      originalUrl="assets/images/uploaded_1779532213160_____________________________________________________.png"
+                      onUploaded={(url) => handleImageUploaded("assets/images/uploaded_1779532213160_____________________________________________________.png", url)}
                     />
                   )}
                   <div className="absolute inset-0 bg-black/[0.02] pointer-events-none" />
@@ -1334,15 +1346,15 @@ export default function App() {
                   {/* Background Image / Illustration */}
                   <div className="absolute inset-0 z-0">
                     <img 
-                      src={getOverriddenImg("/assets/images/regenerated_image_1779446667775.png")} 
+                      src={getOverriddenImg("assets/images/regenerated_image_1779446667775.png")} 
                       alt="Work Background"
                       className="w-full h-full object-cover grayscale brightness-[25%]"
                       referrerPolicy="no-referrer"
                     />
                     {isAdmin && (
                       <ImageUploadOverlay 
-                        originalUrl="/assets/images/regenerated_image_1779446667775.png"
-                        onUploaded={(url) => handleImageUploaded("/assets/images/regenerated_image_1779446667775.png", url)}
+                        originalUrl="assets/images/regenerated_image_1779446667775.png"
+                        onUploaded={(url) => handleImageUploaded("assets/images/regenerated_image_1779446667775.png", url)}
                       />
                     )}
                   </div>
@@ -1974,14 +1986,14 @@ export default function App() {
                 
                 <div className="aspect-square bg-white rounded-3xl overflow-hidden shadow-inner border border-black/5 p-4 flex items-center justify-center relative group">
                   <img 
-                    src={getOverriddenImg("/assets/images/regenerated_image_1778551850611.png")} 
+                    src={getOverriddenImg("assets/images/regenerated_image_1778551850611.png")} 
                     alt="WeChat QR Code"
                     className="w-full h-full object-contain"
                   />
                   {isAdmin && (
                     <ImageUploadOverlay 
-                      originalUrl="/assets/images/regenerated_image_1778551850611.png"
-                      onUploaded={(url) => handleImageUploaded("/assets/images/regenerated_image_1778551850611.png", url)}
+                      originalUrl="assets/images/regenerated_image_1778551850611.png"
+                      onUploaded={(url) => handleImageUploaded("assets/images/regenerated_image_1778551850611.png", url)}
                     />
                   )}
                 </div>
