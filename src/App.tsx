@@ -47,7 +47,7 @@ const portfolioItems = [
     title: "平面视觉", 
     category: "BRAND", 
     time: "2020 - 2025", 
-    image: "/assets/images/uploaded_1779458320362______.png",
+    image: "/assets/images/uploaded_1779500610609______.png",
     description: "深耕各类商业静态视觉创作，统筹版式排版与视觉调性，兼顾实用价值与整体美感。",
     tags: ["企业画册", "商业海报", "电商主图详情页"],
     subProjects: [
@@ -56,10 +56,10 @@ const portfolioItems = [
         tag: "企业画册",
         description: "为工业防护涂料知名品牌（大连万信）打造的百年企宣创意画册设计。排版选用稳重严谨的栅格，搭配极富表现力的荧光色度与精致排字规范，达成卓越的易读性与时代力量表现。",
         images: [
-          "/assets/images/uploaded_1779458320362______.png",
-          "/assets/images/uploaded_1779458328645______.png",
-          "/assets/images/uploaded_1779458355234______.png",
-          "/assets/images/uploaded_1779458609572______2.png"
+          "/assets/images/uploaded_1779500610609______.png",
+          "/assets/images/uploaded_1779500930070_________2.png",
+          "/assets/images/uploaded_1779500976085______.png",
+          "/assets/images/uploaded_1779501056493______2.png"
         ]
       },
       {
@@ -67,9 +67,9 @@ const portfolioItems = [
         tag: "企业画册",
         description: "为工业防护涂料知名品牌特制的抗划痕面漆定制三折页画册宣传册设计。排版融合极致的科技感与清晰的数据信息层级，全方位突显其卓越的耐划伤和耐磨损核心卖点。",
         images: [
-          "/assets/images/uploaded_1779459052137_Mockup.png",
-          "/assets/images/uploaded_1779459127826_Mockup3.png",
-          "/assets/images/uploaded_1779459221952_Mockup2.png"
+          "/assets/images/uploaded_1779501071246_Mockup.png",
+          "/assets/images/uploaded_1779501086570_Mockup3.png",
+          "/assets/images/uploaded_1779501115640_Mockup2.png"
         ]
       },
       {
@@ -77,8 +77,8 @@ const portfolioItems = [
         tag: "商业海报",
         description: "富有艺术表现力的商业品宣海报。采用高品质局部色块冲突，融合解构几何形态排版，适合在实体橱窗、展览以及社交媒体端作为吸睛宣传视觉面世。",
         images: [
-          "/assets/images/uploaded_1779459447163_Mockup3.png",
-          "/assets/images/uploaded_1779459641485_Mockup2.png"
+          "/assets/images/uploaded_1779501147394_Mockup3.png",
+          "/assets/images/uploaded_1779501186736_Mockup2.png"
         ]
       },
       {
@@ -86,8 +86,8 @@ const portfolioItems = [
         tag: "电商主图详情页",
         description: "专为精细艺术品及奢品多端详情适配研发的交互型排版陈列方案。针对微小光源阴影和材质边缘实施次像素修整，营造一流的商业转化拉力。",
         images: [
-          "/assets/images/uploaded_1779459909040_Landscape.png",
-          "/assets/images/uploaded_1779459948525_Mockup.png"
+          "/assets/images/uploaded_1779501231251_Landscape.png",
+          "/assets/images/uploaded_1779501404448_Mockup.png"
         ]
       }
     ]
@@ -108,7 +108,7 @@ const portfolioItems = [
         description: "精细剪辑与流光调色。融注灵动的情感脉络，全方位彰显数字潮牌在多元时空维度的创新面貌与叙事温度。",
         images: [
           "/assets/images/regenerated_image_1777987826245.png",
-          "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2670&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502101022_0.jpg"
         ]
       },
       {
@@ -116,8 +116,8 @@ const portfolioItems = [
         tag: "产品介绍视频",
         description: "高端灰度质感与微距近景跟焦。用动态流体分镜和机械组装拆解，极其专业地雕刻产品的前沿硬核构造与核心卖点。",
         images: [
-          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2574&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2560&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502101053_1.jpg",
+          "/assets/images/downloaded_1779502102878_7.jpg"
         ]
       },
       {
@@ -125,8 +125,8 @@ const portfolioItems = [
         tag: "创意动态内容",
         description: "专为短格式社媒宣发定制的高清动态视频切片。节奏紧凑欢快，动感剪帧，能瞬间捕获观者的指尖注意力。",
         images: [
-          "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2560&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2670&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502102861_6.jpg",
+          "/assets/images/downloaded_1779502101022_0.jpg"
         ]
       }
     ]
@@ -137,7 +137,7 @@ const portfolioItems = [
     title: "空间视觉", 
     category: "SPACE", 
     time: "2020 - 2025", 
-    image: "/assets/images/uploaded_1779460097335________2____1.png",
+    image: "/assets/images/uploaded_1779501868982_630e95b66319f0be881b0f2966f0df69.jpg",
     description: "跳出纸面，让平面创意走进真实场景，落地成可触摸、可感知的实体视觉作品。",
     tags: ["线下主题展板", "企业文化墙"],
     subProjects: [
@@ -146,9 +146,9 @@ const portfolioItems = [
         tag: "线下主题展板",
         description: "通过经典的暖黄色物理空间造景，将手造玻璃的纹路、色泽极佳地呼应到现代极简场馆布置中，开辟沉浸感卓越的实体感知场域。",
         images: [
-          "/assets/images/uploaded_1779460097335________2____1.png",
+          "/assets/images/uploaded_1779501868982_630e95b66319f0be881b0f2966f0df69.jpg",
           "/assets/images/regenerated_image_1778157281116.png",
-          "https://images.unsplash.com/photo-1600585154340-be6161aed6a5?q=80&w=2670&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502102918_8.jpg"
         ]
       },
       {
@@ -156,8 +156,8 @@ const portfolioItems = [
         tag: "企业文化墙",
         description: "现代主义几何立体展陈墙设计。让枯燥的数据和漫长的企业成长时间线跃然墙面，营造出兼具人文色彩与先锋气质的参观动线重点。",
         images: [
-          "https://images.unsplash.com/photo-1616489953149-807981b29333?q=80&w=2670&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1582037928867-6770fd725be8?q=80&w=2670&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502102878_7.jpg",
+          "/assets/images/downloaded_1779502102861_6.jpg"
         ]
       }
     ]
@@ -178,7 +178,7 @@ const portfolioItems = [
         description: "混彩潮流IP酷酷公仔形象。在三维数字模型中运用极致渲染器打磨其流体高反光复合材质，展示多维度的街头波普新锐风格。",
         images: [
           "/assets/images/regenerated_image_1777987878599.png",
-          "https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=2564&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502102861_6.jpg"
         ]
       },
       {
@@ -186,8 +186,8 @@ const portfolioItems = [
         tag: "三维建模",
         description: "次世代三维写实质感渲染。利用高级多层光遮蔽材质，模拟冰冷合金与澄透结晶的物理共生，呈现出太空歌剧和科幻感满溢的微观艺术雕塑。",
         images: [
-          "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop"
+          "/assets/images/downloaded_1779502102878_7.jpg",
+          "/assets/images/downloaded_1779502102918_8.jpg"
         ]
       }
     ]
@@ -354,7 +354,25 @@ export default function App() {
     }
   });
 
+  // Dynamic state for portfoliowise global synchronization
+  const [projects, setProjects] = useState<any[]>(portfolioItems);
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Password Authentication Dialog control states
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authPassword, setAuthPassword] = useState("");
+  const [authError, setAuthError] = useState("");
+
+  // Sub Project Text Edit control states
+  const [editingSubProjectIdx, setEditingSubProjectIdx] = useState<number | null>(null);
+  const [editingSubProject, setEditingSubProject] = useState<any | null>(null);
+
+  // Hidden references for uploading and parsing images
+  const subProjectImgInputRef = useRef<HTMLInputElement>(null);
+
+  // GET Overrides on start and portfolio synchronizer sync
   useEffect(() => {
+    // 1. Fetch overrides
     fetch("/api/overrides")
       .then((res) => {
         if (!res.ok) throw new Error("Sync failed");
@@ -374,6 +392,19 @@ export default function App() {
         }
       })
       .catch((err) => console.log("Standalone/offline local configuration loaded. Server sync omitted:", err));
+
+    // 2. Fetch live global portfolio database
+    fetch("/api/portfolio")
+      .then((res) => {
+        if (!res.ok) throw new Error("Portfolio dynamic fetch failed");
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setProjects(data);
+        }
+      })
+      .catch((err) => console.log("Failed loading portfolio data from backend:", err));
   }, []);
 
   const getOverriddenImg = (url: string): string => {
@@ -390,9 +421,254 @@ export default function App() {
     }
   };
 
+  // POST Global synchronizer
+  const savePortfolio = async (updatedProjects: any[]) => {
+    setIsSaving(true);
+    try {
+      const response = await fetch("/api/portfolio", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password: "Wuzhenxin123",
+          data: updatedProjects,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setProjects(updatedProjects);
+      } else {
+        alert("保存失败: " + (data.error || "未知错误"));
+      }
+    } catch (e: any) {
+      console.error("Save portfolio failed:", e);
+      alert("保存失败: " + e.message);
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const handleAuthenticate = () => {
+    if (authPassword === "Wuzhenxin123") {
+      setIsAdmin(true);
+      setShowAuthModal(false);
+      setAuthPassword("");
+      setAuthError("");
+    } else {
+      setAuthError("密码错误，请重新输入");
+    }
+  };
+
+  // Main Categories Custom Editor
+  const handleAddCategory = () => {
+    const title = window.prompt("请输入新作品集大类的中文分类名称（例如：画册设计 / UI设计）：");
+    if (!title) return;
+    
+    // Auto-generate some credentials
+    const tagVal = window.prompt("为该大类添加一个首选子分类标签（例如：企业画册）：") || "设计";
+    const partNum = String(projects.length + 1).padStart(2, "0");
+    const newId = `custom_${Date.now()}`;
+    const newCategory = {
+      id: newId,
+      part: partNum,
+      title: title,
+      category: title.toUpperCase(),
+      time: "2020 - 2026",
+      image: "/assets/images/uploaded_1779500610609______.png",
+      description: `深耕${title}创意，融合先锋物理渲染与人文感知底色。`,
+      tags: [tagVal],
+      subProjects: [
+        {
+          title: `默认${title}作品`,
+          tag: tagVal,
+          description: `为【${title}】分类新建的初始子项目。您可以通过编辑更改此文字。`,
+          images: ["/assets/images/uploaded_1779500610609______.png"]
+        }
+      ]
+    };
+    
+    const updatedProjects = [...projects, newCategory];
+    savePortfolio(updatedProjects);
+  };
+
+  const handleDeleteCategory = (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!window.confirm("确定要删除整个【作品大分类】以及里面的所有子项目吗？此操作不可撤销。")) return;
+    
+    const updatedProjects = projects.filter(p => p.id !== id);
+    const orderedProjects = updatedProjects.map((p, idx) => ({
+      ...p,
+      part: String(idx + 1).padStart(2, "0")
+    }));
+    
+    savePortfolio(orderedProjects);
+  };
+
+  // Sub Project Add and Edit Mechanics
+  const handleAddSubProject = () => {
+    if (!selectedProject) return;
+    setEditingSubProjectIdx(-1); // -1 marks we are making a new sub-project
+    setEditingSubProject({
+      title: "全新概念展示项目",
+      tag: selectedProject.tags[0] || "其他",
+      description: "在这里输入专业的项目介绍、调色以及物理几何工艺详情描述...",
+      images: ["/assets/images/uploaded_1779500610609______.png"]
+    });
+  };
+
+  const handleEditSubProject = (idx: number) => {
+    if (!selectedProject) return;
+    setEditingSubProjectIdx(idx);
+    const target = selectedProject.subProjects[idx];
+    setEditingSubProject({
+      title: target.title,
+      tag: target.tag,
+      description: target.description,
+      images: [...target.images]
+    });
+  };
+
+  const handleDeleteSubProject = (idx: number) => {
+    if (!selectedProject) return;
+    if (!window.confirm("确定要删除这个项目吗？里面的图片和文字都将被移除。")) return;
+    
+    const updatedSubProjects = selectedProject.subProjects.filter((_, sIdx) => sIdx !== idx);
+    const updatedProject = {
+      ...selectedProject,
+      subProjects: updatedSubProjects
+    };
+    
+    const updatedProjects = projects.map(p => p.id === selectedProject.id ? updatedProject : p);
+    setSelectedProject(updatedProject);
+    savePortfolio(updatedProjects);
+  };
+
+  const handleSaveSubProjectDetails = () => {
+    if (!selectedProject || !editingSubProject) return;
+    
+    let updatedSubProjects = [...selectedProject.subProjects];
+    if (editingSubProjectIdx === -1) {
+      updatedSubProjects.push(editingSubProject);
+    } else if (editingSubProjectIdx !== null) {
+      updatedSubProjects[editingSubProjectIdx] = editingSubProject;
+    }
+    
+    // Auto sync selected project's categories
+    const updatedTags = [...selectedProject.tags];
+    if (editingSubProject.tag && !updatedTags.includes(editingSubProject.tag)) {
+      updatedTags.push(editingSubProject.tag);
+    }
+    
+    const updatedProject = {
+      ...selectedProject,
+      tags: updatedTags,
+      subProjects: updatedSubProjects
+    };
+    
+    const updatedProjects = projects.map(p => p.id === selectedProject.id ? updatedProject : p);
+    setSelectedProject(updatedProject);
+    savePortfolio(updatedProjects);
+    
+    setEditingSubProjectIdx(null);
+    setEditingSubProject(null);
+  };
+
+  // Direct Thumbnail ROW Interactions in Sub Project View
+  const handleDeleteImageFromActiveSubProj = (imageIdx: number) => {
+    if (!selectedProject || selectedGalleryItemIndex === null) return;
+    
+    const activeSubProj = selectedProject.subProjects[selectedGalleryItemIndex];
+    if (activeSubProj.images.length <= 1) {
+      alert("每个项目必须保留至少 1 张图片，以展示完美视觉！");
+      return;
+    }
+    
+    const updatedSubProjects = selectedProject.subProjects.map((sub, sIdx) => {
+      if (sIdx === selectedGalleryItemIndex) {
+        return {
+          ...sub,
+          images: sub.images.filter((_, imgI) => imgI !== imageIdx)
+        };
+      }
+      return sub;
+    });
+    
+    const updatedProject = {
+      ...selectedProject,
+      subProjects: updatedSubProjects
+    };
+    
+    const updatedProjects = projects.map(p => p.id === selectedProject.id ? updatedProject : p);
+    
+    if (activeImageIndex >= updatedSubProjects[selectedGalleryItemIndex].images.length) {
+      setActiveImageIndex(Math.max(0, updatedSubProjects[selectedGalleryItemIndex].images.length - 1));
+    }
+    
+    setSelectedProject(updatedProject);
+    savePortfolio(updatedProjects);
+  };
+
+  const handleSubProjectImgMetaFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !selectedProject || selectedGalleryItemIndex === null) return;
+    
+    try {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        const base64Content = reader.result as string;
+        const compressedBase64 = await compressImage(base64Content);
+        
+        const response = await fetch("/api/upload", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fileName: file.name,
+            fileContent: compressedBase64,
+            originalUrl: `/assets/images/dynamic_${Date.now()}_${file.name}`
+          })
+        });
+        
+        if (response.ok) {
+          const resJson = await response.json();
+          const targetUrl = resJson.relativeUrl || compressedBase64;
+          
+          const updatedSubProjects = selectedProject.subProjects.map((sub, sIdx) => {
+            if (sIdx === selectedGalleryItemIndex) {
+              return {
+                ...sub,
+                images: [...sub.images, targetUrl]
+              };
+            }
+            return sub;
+          });
+          
+          const updatedProject = {
+            ...selectedProject,
+            subProjects: updatedSubProjects
+          };
+          
+          const updatedProjects = projects.map(p => p.id === selectedProject.id ? updatedProject : p);
+          setSelectedProject(updatedProject);
+          savePortfolio(updatedProjects);
+          
+          setActiveImageIndex(updatedProject.subProjects[selectedGalleryItemIndex].images.length - 1);
+        }
+      };
+      reader.readAsDataURL(file);
+    } catch (err) {
+      console.error(err);
+      alert("添加图片失败，请重试");
+    } finally {
+      e.target.value = "";
+    }
+  };
+
   const [activeNav, setActiveNav] = useState("关于我");
   const [showQRCode, setShowQRCode] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<null | typeof portfolioItems[0]>(null);
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
   const [selectedGalleryItemIndex, setSelectedGalleryItemIndex] = useState<number | null>(null);
   const [selectedTagFilter, setSelectedTagFilter] = useState<string>("ALL");
   const [activeNote, setActiveNote] = useState<1 | 2>(2);
@@ -596,26 +872,25 @@ export default function App() {
 
       <main className={selectedProject ? "invisible pointer-events-none" : "relative"}>
         {/* Hero Section Container for positioning indicator outside clipped area */}
-        <div className="relative max-w-[1400px] mx-auto mt-10">
+        <div className="relative max-w-[1400px] mx-auto mt-12 md:mt-16">
           <section 
-            className="bg-white rounded-b-[60px] pb-12 pt-24 px-6 md:px-16 lg:px-24 relative z-20 w-full shadow-sm overflow-hidden"
+            className="bg-white rounded-b-[60px] pb-12 pt-24 md:pt-28 lg:pt-24 px-6 md:px-8 lg:px-16 xl:px-24 relative z-20 w-full shadow-sm overflow-hidden"
             style={{ 
               clipPath: 'url(#hero-clip-path)',
               // Removing standard rounded-t as it will be handled by clip-path for consistency
             }}
           >
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-16 relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-10 xl:gap-16 relative z-10">
             <motion.div 
                initial={{ opacity: 0, x: -50 }}
                animate={{ opacity: 1, x: 0 }}
                transition={{ duration: 0.8 }}
-               className="flex-1 flex flex-col justify-center items-start space-y-6 md:space-y-8 pl-2 md:pl-4 py-4 md:py-10"
+               className="flex-1 flex flex-col justify-center items-start space-y-6 lg:space-y-8 pl-2 md:pl-4 py-4 lg:py-10"
             >
               {/* Top Greeting line */}
               <div className="flex items-center mb-1">
                 <span 
-                  className="text-[11px] md:text-[13px] font-sans font-semibold text-neutral-400 tracking-[0.3em] uppercase inline-block"
-                  style={{ marginTop: "-48px" }}
+                  className="text-[11px] md:text-[13px] lg:text-[13px] font-sans font-semibold text-neutral-400 tracking-[0.3em] uppercase inline-block -mt-4 lg:-mt-[40px]"
                 >
                   HELLO, I'M WUZHENXIN
                 </span>
@@ -623,20 +898,19 @@ export default function App() {
 
               {/* Huge typographic feature */}
               <div className="flex flex-col select-none leading-none">
-                <h1 className="text-[52px] sm:text-[72px] md:text-[104px] lg:text-[112px] font-serif italic font-extrabold text-black tracking-tighter leading-[0.9]">
+                <h1 className="text-[44px] sm:text-[64px] md:text-[80px] lg:text-[88px] xl:text-[112px] font-serif italic font-extrabold text-black tracking-tighter leading-[0.9]">
                   Design
                 </h1>
-                <h1 className="text-[60px] sm:text-[84px] md:text-[128px] lg:text-[136px] font-sans font-black italic uppercase text-neon-green tracking-tight leading-[0.8] -mt-3">
+                <h1 className="text-[52px] sm:text-[74px] md:text-[92px] lg:text-[100px] xl:text-[136px] font-sans font-black italic uppercase text-neon-green tracking-tight leading-[0.8] -mt-2 lg:-mt-3">
                   PORTFOLIO
                 </h1>
               </div>
 
               {/* Bottom taglines with vertical lime accent */}
               <div 
-                className="flex items-center gap-4.5 py-1 border-l-[3px] border-neon-green pl-4 self-stretch md:self-auto"
-                style={{ marginTop: "28px" }}
+                className="flex items-center gap-4.5 py-1 border-l-[3px] border-neon-green pl-4 self-stretch md:self-auto mt-4 lg:mt-[28px]"
               >
-                <p className="text-neutral-800 font-sans text-xs sm:text-sm md:text-lg font-medium tracking-wide">
+                <p className="text-neutral-800 font-sans text-xs sm:text-sm md:text-lg lg:text-lg font-medium tracking-wide">
                   视觉设计师 / 热爱创造 / 关注细节 / 解决问题
                 </p>
               </div>
@@ -646,24 +920,23 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
               animate={{ opacity: 1, scale: 1, rotate: -2 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="relative px-4 md:px-0 md:pr-12 lg:pr-16 md:mr-4 lg:mr-8"
+              className="relative px-4 lg:pr-8 xl:pr-16 lg:mr-4 xl:mr-8"
             >
               {/* Polaroid Frame - Changed to premium white styling with realistic drop shadows */}
               <div 
-                className="relative z-10 w-64 md:w-80 p-5 pb-16 bg-white border border-neutral-200/50 rounded-xs shadow-[0_24px_50px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.04)] transform hover:rotate-1 hover:scale-[1.02] transition-all duration-300"
-                style={{ marginLeft: "18px" }}
+                className="relative z-10 w-64 md:w-80 lg:w-72 xl:w-80 p-4 lg:p-5 pb-10 lg:pb-16 bg-white border border-neutral-200/50 rounded-xs shadow-[0_24px_50px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.04)] transform hover:rotate-1 hover:scale-[1.02] transition-all duration-300 ml-3 lg:ml-[18px]"
               >
                 <div className="aspect-[3/4] bg-neutral-50 overflow-hidden relative group border border-neutral-200/40">
                   <img 
-                    src={getOverriddenImg("/assets/images/regenerated_image_1779408918460.png")} 
+                    src={getOverriddenImg("/assets/images/uploaded_1779500554610_____________________________________________________.png")} 
                     alt="Portrait"
                     className="w-full h-full object-cover grayscale transition-all duration-700 hover:grayscale-0 group-hover:grayscale-0 hover:scale-105 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   {isAdmin && (
                     <ImageUploadOverlay 
-                      originalUrl="/assets/images/regenerated_image_1779408918460.png"
-                      onUploaded={(url) => handleImageUploaded("/assets/images/regenerated_image_1779408918460.png", url)}
+                      originalUrl="/assets/images/uploaded_1779500554610_____________________________________________________.png"
+                      onUploaded={(url) => handleImageUploaded("/assets/images/uploaded_1779500554610_____________________________________________________.png", url)}
                     />
                   )}
                   <div className="absolute inset-0 bg-black/[0.02] pointer-events-none" />
@@ -975,15 +1248,25 @@ export default function App() {
           </div>
 
           <div className="max-w-7xl mx-auto space-y-12">
-            <div className="flex items-baseline gap-4">
-              <h2 className="text-6xl font-serif italic text-black font-black tracking-tighter">Contents.</h2>
-              <span className="bg-black text-neon-green font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full">作品集</span>
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 border-b-2 border-black/5 pb-4">
+              <div className="flex items-baseline gap-4">
+                <h2 className="text-6xl font-serif italic text-black font-black tracking-tighter">Contents.</h2>
+                <span className="bg-black text-neon-green font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full">作品集</span>
+              </div>
+              {isAdmin && (
+                <button
+                  onClick={handleAddCategory}
+                  className="px-5 py-2.5 bg-black text-[#D9FF33] hover:text-black hover:bg-[#D9FF33] font-sans font-black text-xs uppercase tracking-widest border border-black rounded-full flex items-center gap-1.5 transition-all duration-200 shadow-[3px_3px_0px_#000] cursor-pointer"
+                >
+                  ➕ 新增分类 (Add Category)
+                </button>
+              )}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 lg:gap-12 pb-8 max-w-6xl mx-auto">
-              {portfolioItems.map((item, idx) => (
+              {projects.map((item, idx) => (
                 <motion.div 
-                  key={idx}
+                  key={item.id || idx}
                   initial="initial"
                   whileInView="animate"
                   whileHover="hover"
@@ -1001,6 +1284,16 @@ export default function App() {
                     backgroundSize: '20px 20px' 
                   }}
                 >
+                  {/* Delete category button for Admin */}
+                  {isAdmin && (
+                    <button
+                      onClick={(e) => handleDeleteCategory(item.id, e)}
+                      className="absolute top-6 left-6 z-50 w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-lg border border-red-500/10 cursor-pointer hover:scale-110 active:scale-90 transition-all"
+                      title="删除此分类"
+                    >
+                      🗑️
+                    </button>
+                  )}
                   {/* Pin element */}
                   <div className="absolute top-8 right-12 z-30 pointer-events-none">
                     <motion.div
@@ -1383,9 +1676,17 @@ export default function App() {
                             {selectedProject.title}作品
                           </h2>
                         </div>
-                        <span className="text-sm font-mono text-black/40">
-                          共 {selectedProject.subProjects.length} 项创意设计发布
-                        </span>
+                        <div className="flex items-center gap-4 text-sm font-mono text-black/40">
+                          <span>共 {selectedProject.subProjects.length} 项创意设计发布</span>
+                          {isAdmin && (
+                            <button
+                              onClick={handleAddSubProject}
+                              className="px-4 py-2 bg-neutral-900 hover:bg-black text-[#D9FF33] font-bold text-xs uppercase tracking-wider rounded-xl border border-black/10 shadow-[2px_2px_0px_#000] hover:scale-105 active:scale-95 transition-all cursor-pointer flex items-center gap-1.5"
+                            >
+                              <span>➕ 新增项目</span>
+                            </button>
+                          )}
+                        </div>
                       </div>
                       
                       {/* Horizontal filter tabs inspired by reference Image 1 */}
@@ -1442,6 +1743,26 @@ export default function App() {
                             className="cursor-pointer group flex flex-col justify-between"
                           >
                             <div className="rounded-[24px] overflow-hidden bg-stone-50 border border-black/5 aspect-[4/3] sm:aspect-square relative flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow group">
+                              {/* Admin edit and delete overlays */}
+                              {isAdmin && (
+                                <div className="absolute top-4 left-4 z-50 flex gap-2" onClick={(e) => e.stopPropagation()}>
+                                  <button
+                                    onClick={() => handleEditSubProject(i)}
+                                    className="w-8 h-8 rounded-full bg-black hover:bg-[#D9FF33] hover:text-black text-[10px] text-white flex items-center justify-center border border-white/20 shadow-lg hover:scale-115 active:scale-85 transition-all cursor-pointer"
+                                    title="编辑内容文本与图片集"
+                                  >
+                                    ✏️
+                                  </button>
+                                  <button
+                                    onClick={() => handleDeleteSubProject(i)}
+                                    className="w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-[10px] text-white flex items-center justify-center border border-red-500/15 shadow-lg hover:scale-115 active:scale-85 transition-all cursor-pointer"
+                                    title="删除此演示项目"
+                                  >
+                                    🗑️
+                                  </button>
+                                </div>
+                              )}
+
                               <img 
                                 src={getOverriddenImg(subProj.images[0])} 
                                 alt={title} 
@@ -1538,28 +1859,64 @@ export default function App() {
                             <span className="h-1.5 w-1.5 rounded-full bg-neon-green" />
                             <span>方案选集 / SELECT CONCEPT IMAGES</span>
                           </p>
-                          <div className="flex gap-3 overflow-x-auto scrollbar-none py-1">
+                           <div className="flex gap-3 overflow-x-auto scrollbar-none py-1 items-center">
                             {selectedProject.subProjects[selectedGalleryItemIndex].images.map((imgUrl, idx) => (
-                              <button
-                                key={idx}
-                                onClick={() => setActiveImageIndex(idx)}
-                                className={`relative flex-shrink-0 aspect-[4/3] w-20 md:w-28 rounded-xl overflow-hidden border transition-all duration-300 cursor-pointer ${
-                                  idx === activeImageIndex 
-                                    ? "border-black ring-2 ring-black/15 shadow-md scale-95" 
-                                    : "border-black/5 hover:border-black/30 opacity-60 hover:opacity-100"
-                                }`}
-                              >
-                                <img 
-                                  src={getOverriddenImg(imgUrl)} 
-                                  alt={`Concept ${idx + 1}`}
-                                  className="w-full h-full object-cover"
-                                  referrerPolicy="no-referrer"
-                                />
-                                {idx === activeImageIndex && (
-                                  <div className="absolute inset-0 border-2 border-neon-green rounded-[10px] pointer-events-none" />
+                              <div key={idx} className="relative group/thumb shrink-0">
+                                <button
+                                  onClick={() => setActiveImageIndex(idx)}
+                                  className={`relative flex-shrink-0 aspect-[4/3] w-20 md:w-28 rounded-xl overflow-hidden border transition-all duration-300 cursor-pointer ${
+                                    idx === activeImageIndex 
+                                      ? "border-black ring-2 ring-black/15 shadow-md scale-95" 
+                                      : "border-black/5 hover:border-black/30 opacity-60 hover:opacity-100"
+                                  }`}
+                                >
+                                  <img 
+                                    src={getOverriddenImg(imgUrl)} 
+                                    alt={`Concept ${idx + 1}`}
+                                    className="w-full h-full object-cover"
+                                    referrerPolicy="no-referrer"
+                                  />
+                                  {idx === activeImageIndex && (
+                                    <div className="absolute inset-0 border-2 border-neon-green rounded-[10px] pointer-events-none" />
+                                  )}
+                                </button>
+                                
+                                {/* Inline delete button for admin to control the number of images */}
+                                {isAdmin && (
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handleDeleteImageFromActiveSubProj(idx);
+                                    }}
+                                    className="absolute -top-1.5 -right-1.5 z-50 w-5 h-5 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-lg cursor-pointer text-[8px] font-bold border border-white/20 transition-transform scale-90 hover:scale-110 active:scale-75"
+                                    title="删除此图片"
+                                  >
+                                    ✕
+                                  </button>
                                 )}
-                              </button>
+                              </div>
                             ))}
+
+                            {/* Direct Append Image feature on the thumbnails row for admin */}
+                            {isAdmin && (
+                              <div className="relative shrink-0">
+                                <input 
+                                  type="file" 
+                                  ref={subProjectImgInputRef} 
+                                  onChange={handleSubProjectImgMetaFileChange} 
+                                  accept="image/*" 
+                                  className="hidden" 
+                                />
+                                <button
+                                  onClick={() => subProjectImgInputRef.current?.click()}
+                                  className="flex-shrink-0 aspect-[4/3] w-20 md:w-28 rounded-xl bg-neutral-50 hover:bg-neutral-100 border border-dashed border-neutral-300 hover:border-neutral-500 text-neutral-600 font-sans font-black flex flex-col items-center justify-center transition-all text-[9px] cursor-pointer hover:shadow-inner"
+                                  title="上传新图片并加入此项目"
+                                >
+                                  <span className="text-sm">➕</span>
+                                  <span className="text-[8px] font-mono tracking-widest mt-0.5">UPLOAD</span>
+                                </button>
+                              </div>
+                            )}
                           </div>
                         </div>
                         
@@ -1726,18 +2083,291 @@ export default function App() {
         )}
       </AnimatePresence>
 
+      {/* Dynamic Authorization Modal */}
+      <AnimatePresence>
+        {showAuthModal && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/85 backdrop-blur-md z-[99999] flex items-center justify-center p-4"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 15 }}
+              transition={{ type: "spring", damping: 25, stiffness: 350 }}
+              className="bg-neutral-900 border border-neutral-800 text-white p-8 rounded-3xl max-w-sm w-full shadow-[0_25px_60px_rgba(0,0,0,0.8)] relative"
+            >
+              <button 
+                onClick={() => {
+                  setShowAuthModal(false);
+                  setAuthPassword("");
+                  setAuthError("");
+                }}
+                className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-12 h-12 rounded-2xl bg-[#D9FF33]/10 flex items-center justify-center border border-[#D9FF33]/20">
+                  <Fingerprint className="w-6 h-6 text-[#D9FF33]" />
+                </div>
+                <div>
+                  <h3 className="font-serif italic font-black text-xl text-stone-100">管理权限校验</h3>
+                  <p className="text-[10px] text-neutral-400 font-mono mt-1 uppercase tracking-widest">ADMIN SECURITY PROTOCOL</p>
+                </div>
+                
+                <div className="w-full space-y-2 pt-2">
+                  <input
+                    type="password"
+                    placeholder="请输入管理员密码"
+                    value={authPassword}
+                    onChange={(e) => {
+                      setAuthPassword(e.target.value);
+                      setAuthError("");
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        handleAuthenticate();
+                      }
+                    }}
+                    className="w-full bg-neutral-950 text-stone-100 text-center text-sm px-4 py-3 border border-neutral-800 rounded-xl focus:outline-none focus:border-[#D9FF33] transition-colors font-sans tracking-widest placeholder:text-neutral-600 placeholder:tracking-normal"
+                    autoFocus
+                  />
+                  {authError && (
+                    <p className="text-red-500 font-bold text-[11px] text-center mt-1 animate-pulse">
+                      ⚡ {authError}
+                    </p>
+                  )}
+                </div>
+                
+                <button
+                  onClick={handleAuthenticate}
+                  className="w-full bg-[#D9FF33] text-black font-black text-xs uppercase tracking-widest py-3.5 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-[#D9FF33]/20"
+                >
+                  验证并开启编辑 UNLOCK
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Subproject Editing Modal */}
+      <AnimatePresence>
+        {editingSubProjectIdx !== null && editingSubProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/85 backdrop-blur-md z-[99999] flex items-center justify-center p-4 overflow-y-auto"
+          >
+            <motion.div
+              initial={{ scale: 0.93, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.93, y: 15 }}
+              className="bg-neutral-900 border border-neutral-800 text-stone-100 p-8 rounded-[32px] max-w-lg w-full shadow-2xl space-y-6 my-8"
+            >
+              <div className="flex justify-between items-center border-b border-neutral-800 pb-4">
+                <div>
+                  <h3 className="font-serif italic font-black text-xl text-[#D9FF33]">
+                    {editingSubProjectIdx === -1 ? "新增设计子项目" : "编辑子项目详情"}
+                  </h3>
+                  <p className="text-[10px] text-neutral-400 font-mono tracking-widest mt-0.5">SUBPROJECT PORTFOLIO EDITOR</p>
+                </div>
+                <button 
+                  onClick={() => {
+                    setEditingSubProjectIdx(null);
+                    setEditingSubProject(null);
+                  }}
+                  className="text-neutral-400 hover:text-white cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                {/* Title */}
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono tracking-wider text-neutral-400 uppercase">项目名称 / Project Title</label>
+                  <input
+                    type="text"
+                    value={editingSubProject.title}
+                    onChange={(e) => setEditingSubProject({ ...editingSubProject, title: e.target.value })}
+                    className="w-full bg-neutral-950 border border-neutral-800 focus:border-[#D9FF33] focus:outline-none p-3 rounded-xl text-sm"
+                  />
+                </div>
+
+                {/* Tag / Category selection */}
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono tracking-wider text-neutral-400 uppercase">标签分类 / Category Tag</label>
+                  <input
+                    type="text"
+                    placeholder="例如：企业画册、企业文化墙"
+                    value={editingSubProject.tag}
+                    onChange={(e) => setEditingSubProject({ ...editingSubProject, tag: e.target.value })}
+                    className="w-full bg-neutral-950 border border-neutral-800 focus:border-[#D9FF33] focus:outline-none p-3 rounded-xl text-sm"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-mono tracking-wider text-neutral-400 uppercase">项目描述 / Project Description</label>
+                  <textarea
+                    rows={3}
+                    value={editingSubProject.description}
+                    onChange={(e) => setEditingSubProject({ ...editingSubProject, description: e.target.value })}
+                    className="w-full bg-neutral-950 border border-neutral-800 focus:border-[#D9FF33] focus:outline-none p-3 rounded-xl text-sm leading-relaxed"
+                  />
+                </div>
+
+                {/* Managing the number of images */}
+                <div className="space-y-2">
+                  <label className="text-[11px] font-mono tracking-wider text-neutral-400 uppercase block">
+                    管理项目图片 / Manage Image Gallery ({editingSubProject.images.length})
+                  </label>
+                  
+                  <div className="grid grid-cols-3 gap-3">
+                    {editingSubProject.images.map((img, imgIdx) => (
+                      <div key={imgIdx} className="relative aspect-[4/3] rounded-lg overflow-hidden border border-neutral-800 bg-neutral-950 group">
+                        <img src={getOverriddenImg(img)} alt="" className="w-full h-full object-cover" />
+                        <button
+                          onClick={() => {
+                            const updated = editingSubProject.images.filter((_, tempI) => tempI !== imgIdx);
+                            setEditingSubProject({ ...editingSubProject, images: updated });
+                          }}
+                          className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center text-[8px] font-bold shadow-md cursor-pointer transition-transform hover:scale-110 active:scale-90"
+                          title="删除此图"
+                        >
+                          ✕
+                        </button>
+                      </div>
+                    ))}
+                    
+                    {/* Embedded dynamic image builder */}
+                    <div 
+                      onClick={() => {
+                        const url = window.prompt("请直接输入网络图片URL地址：");
+                        if (url) {
+                          setEditingSubProject({
+                            ...editingSubProject,
+                            images: [...editingSubProject.images, url]
+                          });
+                        }
+                      }}
+                      className="aspect-[4/3] rounded-lg border border-dashed border-neutral-850 hover:border-[#D9FF33] flex flex-col items-center justify-center text-[10px] text-neutral-400 hover:text-white transition-colors cursor-pointer"
+                    >
+                      <span>🔗 添加URL</span>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-2">
+                    <input
+                      type="file"
+                      id="modal-image-uploader"
+                      className="hidden"
+                      onChange={async (e) => {
+                        const file = e.target.files?.[0];
+                        if (!file) return;
+                        const reader = new FileReader();
+                        reader.onload = async () => {
+                          const base64 = reader.result as string;
+                          const compressed = await compressImage(base64);
+                          const response = await fetch("/api/upload", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                              fileName: file.name,
+                              fileContent: compressed,
+                              originalUrl: `/assets/images/proj_${Date.now()}_${file.name}`
+                            })
+                          });
+                          if (response.ok) {
+                            const data = await response.json();
+                            setEditingSubProject({
+                              ...editingSubProject,
+                              images: [...editingSubProject.images, data.relativeUrl || compressed]
+                            });
+                          }
+                        };
+                        reader.readAsDataURL(file);
+                      }}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => document.getElementById("modal-image-uploader")?.click()}
+                      className="w-full py-2 bg-neutral-800 hover:bg-neutral-750 text-xs font-bold rounded-lg cursor-pointer text-center text-stone-200 transition-colors border border-neutral-750/50"
+                    >
+                      📷 本地上传新图片 (+ Local Photo)
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <button
+                  onClick={() => {
+                    setEditingSubProjectIdx(null);
+                    setEditingSubProject(null);
+                  }}
+                  className="w-1/3 py-3 bg-neutral-800 hover:bg-neutral-750 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+                >
+                  取消 CANCEL
+                </button>
+                <button
+                  onClick={handleSaveSubProjectDetails}
+                  className="w-2/3 py-3 bg-[#D9FF33] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-[#D9FF33]/15"
+                >
+                  保存并同步数据 SAVE
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Admin Mode Toggle FAB */}
-      <div className="fixed bottom-6 left-6 z-[9999] pointer-events-auto">
+      <div className="fixed bottom-6 left-6 z-[9999] pointer-events-auto group">
         <button 
-          onClick={() => setIsAdmin(!isAdmin)}
-          className={`px-5 py-3 rounded-full font-sans font-black text-xs uppercase tracking-widest flex items-center gap-2 border shadow-[3px_3px_0px_#000] cursor-pointer transition-all duration-200 active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] ${
+          onClick={() => {
+            if (isAdmin) {
+              setIsAdmin(false);
+            } else {
+              setShowAuthModal(true);
+            }
+          }}
+          className={`flex items-center h-12 rounded-full font-sans font-black text-xs uppercase tracking-widest border shadow-[3px_3px_0px_#000] cursor-pointer transition-all duration-300 ease-out active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] focus:outline-none overflow-hidden ${
             isAdmin 
-              ? "bg-[#D9FF33] text-black border-black border-2" 
-              : "bg-black text-white hover:bg-neutral-900 border-white/20 hover:border-white"
+              ? "bg-[#D9FF33] text-black border-black border-2 w-12 hover:w-56 px-0 hover:px-5" 
+              : "bg-black text-white hover:bg-neutral-900 border-white/20 hover:border-white w-12 hover:w-48 px-0 hover:px-5"
           }`}
         >
-          <div className={`w-2.5 h-2.5 rounded-full ${isAdmin ? "bg-black animate-pulse" : "bg-[#D9FF33]"}`} />
-          <span>{isAdmin ? "✏️ 编辑模式 (Edit Mode: On)" : "🛠️ 启动编辑 (Edit Mode)"}</span>
+          {isAdmin ? (
+            <div className="flex items-center w-full">
+              {/* Collapsed state display icon with active indicator */}
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center relative">
+                <span className="text-base select-none">✏️</span>
+                <span className="absolute bottom-2.5 right-2.5 w-2 h-2 rounded-full bg-black border border-[#D9FF33] animate-pulse" />
+              </div>
+              {/* Expanding text container */}
+              <span className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-300 ease-out whitespace-nowrap overflow-hidden pr-4 leading-none select-none">
+                编辑模式 ON
+              </span>
+            </div>
+          ) : (
+            <div className="flex items-center w-full">
+              {/* Collapsed state display wrench */}
+              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                <span className="text-base select-none">🛠️</span>
+              </div>
+              {/* Expanding text container */}
+              <span className="opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-xs transition-all duration-300 ease-out whitespace-nowrap overflow-hidden pr-4 leading-none select-none">
+                启动编辑模式
+              </span>
+            </div>
+          )}
         </button>
       </div>
 
@@ -1748,13 +2378,13 @@ export default function App() {
             <path d="M 0,0.1 
                      C 0,0.05 0.01,0 0.04,0 
                      L 0.14,0 
-                     C 0.16,0 0.17,0.01 0.18,0.03 
-                     L 0.19,0.05 
-                     C 0.20,0.07 0.22,0.08 0.24,0.08 
-                     L 0.76,0.08 
-                     C 0.78,0.08 0.80,0.07 0.81,0.05 
-                     L 0.82,0.03 
-                     C 0.83,0.01 0.84,0 0.86,0 
+                     C 0.16,0 0.17,0.005 0.18,0.015 
+                     L 0.19,0.025 
+                     C 0.20,0.035 0.22,0.04 0.24,0.04 
+                     L 0.76,0.04 
+                     C 0.78,0.04 0.80,0.035 0.81,0.025 
+                     L 0.82,0.015 
+                     C 0.83,0.005 0.84,0 0.86,0 
                      L 0.96,0 
                      C 0.99,0 1,0.05 1,0.1 
                      V 0.93 

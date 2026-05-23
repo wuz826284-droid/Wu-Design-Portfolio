@@ -26,6 +26,41 @@ async function startServer() {
     }
   });
 
+  // GET portfolio items from persistent workspace JSON
+  app.get("/api/portfolio", (req, res) => {
+    try {
+      const portfolioPath = path.join(process.cwd(), "src", "portfolio-data.json");
+      if (fs.existsSync(portfolioPath)) {
+        res.json(JSON.parse(fs.readFileSync(portfolioPath, "utf-8")));
+      } else {
+        res.status(404).json({ error: "Portfolio data not found" });
+      }
+    } catch (error: any) {
+      console.error("Failed to read portfolio JSON:", error);
+      res.status(500).json({ error: error.message || "Internal Server Error" });
+    }
+  });
+
+  // POST portfolio updates
+  app.post("/api/portfolio", (req, res) => {
+    try {
+      const { password, data } = req.body;
+      if (password !== "Wuzhenxin123") {
+        return res.status(401).json({ error: "Unauthorized: Invalid password" });
+      }
+      if (!Array.isArray(data)) {
+        return res.status(400).json({ error: "Invalid content format. Expecting portfolio data array" });
+      }
+      const portfolioPath = path.join(process.cwd(), "src", "portfolio-data.json");
+      fs.writeFileSync(portfolioPath, JSON.stringify(data, null, 2), "utf-8");
+      console.log("Global portfolio-data.json updated successfully via Admin API.");
+      res.json({ success: true, message: "Portfolio successfully updated!" });
+    } catch (error: any) {
+      console.error("Failed to update portfolio JSON:", error);
+      res.status(500).json({ error: error.message || "Internal Server Error" });
+    }
+  });
+
   // API upload route
   app.post("/api/upload", (req, res) => {
     try {
