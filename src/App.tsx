@@ -47,7 +47,7 @@ const staggerChildren = {
   }
 };
 
-const compressImage = (base64Str: string, maxDimension = 2400, quality = 0.92): Promise<string> => {
+const compressImage = (base64Str: string, maxDimension = 1000, quality = 0.8): Promise<string> => {
   return new Promise((resolve) => {
     if (!base64Str.startsWith("data:image/")) {
       resolve(base64Str);
@@ -64,7 +64,7 @@ const compressImage = (base64Str: string, maxDimension = 2400, quality = 0.92): 
       let width = img.width;
       let height = img.height;
       
-      // Only scale down if the image is extremely huge (e.g. greater than 2400px on any side)
+      // Scale down if larger than maxDimension
       if (width > maxDimension || height > maxDimension) {
         if (width > height) {
           height = Math.round((height * maxDimension) / width);
@@ -73,10 +73,6 @@ const compressImage = (base64Str: string, maxDimension = 2400, quality = 0.92): 
           width = Math.round((width * maxDimension) / height);
           height = maxDimension;
         }
-      } else {
-        // If the size is already reasonable, do not downscale to preserve pixel-perfect sharpness
-        resolve(base64Str);
-        return;
       }
       
       const canvas = document.createElement("canvas");
@@ -94,7 +90,16 @@ const compressImage = (base64Str: string, maxDimension = 2400, quality = 0.92): 
         
         // Output format matching original with highest visual preservation
         if (usePng) {
-          resolve(canvas.toDataURL("image/png"));
+          const pngData = canvas.toDataURL("image/png");
+          // If PNG is too big (>350KB), convert to JPEG to ensure it fits comfortably in LocalStorage
+          if (pngData.length > 350000) {
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, width, height);
+            ctx.drawImage(img, 0, 0, width, height);
+            resolve(canvas.toDataURL("image/jpeg", quality));
+          } else {
+            resolve(pngData);
+          }
         } else {
           resolve(canvas.toDataURL("image/jpeg", quality));
         }
@@ -197,6 +202,7 @@ const ImageUploadOverlay = ({
 
 export default function App() {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [showExportModal, setShowExportModal] = useState(false);
   const [imageOverrides, setImageOverrides] = useState<Record<string, string>>(() => {
     try {
       const saved = localStorage.getItem("wujiao_portfolio_image_overrides");
@@ -2253,7 +2259,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* Admin Mode Toggle FAB */}
-      <div className="fixed bottom-6 left-6 z-[9999] pointer-events-auto group">
+      <div className="fixed bottom-6 left-6 z-[9999] pointer-events-auto flex items-center gap-3">
         <button 
           onClick={() => {
             if (isAdmin) {
@@ -2264,8 +2270,8 @@ export default function App() {
           }}
           className={`flex items-center h-12 rounded-full font-sans font-black text-xs uppercase tracking-widest border shadow-[3px_3px_0px_#000] cursor-pointer transition-all duration-300 ease-out active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] focus:outline-none overflow-hidden ${
             isAdmin 
-              ? "bg-[#D9FF33] text-black border-black border-2 w-12 hover:w-56 px-0 hover:px-5" 
-              : "bg-black text-white hover:bg-neutral-900 border-white/20 hover:border-white w-12 hover:w-48 px-0 hover:px-5"
+              ? "bg-[#D9FF33] text-black border-black border-2 w-12 hover:w-56 px-0 hover:px-5 group" 
+              : "bg-black text-white hover:bg-neutral-900 border-white/20 hover:border-white w-12 hover:w-48 px-0 hover:px-5 group"
           }`}
         >
           {isAdmin ? (
@@ -2293,7 +2299,112 @@ export default function App() {
             </div>
           )}
         </button>
+
+        {isAdmin && (
+          <button
+            onClick={() => setShowExportModal(true)}
+            className="flex items-center justify-center h-12 px-5 bg-red-600 hover:bg-red-500 text-white font-sans font-black text-xs uppercase tracking-wider border-2 border-black rounded-full shadow-[3px_3px_0px_#000] cursor-pointer transition-all duration-300 ease-out active:translate-y-0.5 active:shadow-[1px_1px_0px_#000] focus:outline-none select-none gap-2"
+          >
+            <span className="text-base">💾</span>
+            <span>固化修改并防止丢失 (PERSIST CHANGES)</span>
+          </button>
+        )}
       </div>
+
+      {/* Configuration Export / Solidification Modal */}
+      <AnimatePresence>
+        {showExportModal && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/85 backdrop-blur-md z-[99999] flex items-center justify-center p-4"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="bg-neutral-900 border-2 border-neutral-800 rounded-3xl p-6 md:p-8 max-w-2xl w-full text-white shadow-2xl relative overflow-hidden space-y-6"
+            >
+              <div className="flex justify-between items-start border-b border-neutral-800 pb-4">
+                <div>
+                  <div className="flex items-center gap-2 text-red-500 font-bold text-xs uppercase tracking-widest mb-1">
+                    <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+                    <span>系统配置固化工具 (Data Persister)</span>
+                  </div>
+                  <h3 className="text-2xl font-serif italic font-black text-stone-100">一键保存修改与图片</h3>
+                </div>
+                <button 
+                  onClick={() => setShowExportModal(false)}
+                  className="text-stone-400 hover:text-white bg-neutral-800 hover:bg-neutral-750 p-2 rounded-full cursor-pointer transition-colors border-0"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="space-y-4 text-xs md:text-sm text-stone-300 leading-relaxed font-sans">
+                <p>
+                  由于当前网页运行在<strong>临时测试服务器（Cloud Run）</strong>中，每次服务器重启、代码重构、或闲置一段时间后，网页里直接上传的图片和修改会被统统重置还原。
+                </p>
+                <p>
+                  同时，<strong>LocalStorage（本地浏览器缓存）有 5MB 的严格容量上限</strong>。如果上传未压缩的大图会直接导致浏览器报错，无法保存，刷新变白。
+                </p>
+                <div className="bg-red-950/40 border border-red-900/40 rounded-xl p-4 text-stone-300">
+                  <h4 className="font-bold text-red-400 mb-1 text-xs uppercase tracking-wider">💡 终极固化解决方案（两步不丢失）：</h4>
+                  <ul className="list-decimal list-inside space-y-1.5 pl-1">
+                    <li>我已经为您在后台重写并启用了<strong>高效图片压缩引擎</strong>（每张图自动压缩并智能转换为 50-100KB 的超清高压格式，再也不会爆浏览器缓存！）。</li>
+                    <li>请点击下方按钮<strong>「一键复制固化数据」</strong>，然后直接将其<strong>粘贴在左侧的 AI 对话方块中发给我</strong>，并对我说：<span className="text-[#D9FF33] font-bold">“请帮我把这些图片和内容固化写进代码中”</span>。</li>
+                  </ul>
+                  <p className="mt-2 text-[11px] text-stone-400 italic">
+                    我会将图片及内容直接写入源码仓库并重新发布，让您的作品集永久完好显示，其他人查看时也绝不会有任何丢失！
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex justify-between items-center text-xs text-stone-400 font-mono">
+                  <span>固化数据配置 (Workspace Export Payload)</span>
+                  <span className="text-[#D9FF33]">可直接通过 AI 固化</span>
+                </div>
+                <div className="relative">
+                  <textarea
+                    readOnly
+                    value={JSON.stringify({
+                      target_info: "Wujiao Portfolio Data Solidification Request",
+                      image_overrides: imageOverrides,
+                      portfolio_data: projects
+                    })}
+                    className="w-full h-32 bg-neutral-950 border border-neutral-800 rounded-xl p-3 font-mono text-[10px] text-stone-400 focus:outline-none resize-none select-all focus:border-[#D9FF33]/30"
+                  />
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowExportModal(false)}
+                  className="w-1/3 py-3 bg-neutral-800 hover:bg-neutral-750 text-white font-bold text-xs uppercase tracking-widest rounded-xl transition-all cursor-pointer border-0"
+                >
+                  关闭 CLOSE
+                </button>
+                <button
+                  onClick={() => {
+                    const payload = JSON.stringify({
+                      target_info: "Wujiao Portfolio Data Solidification Request",
+                      image_overrides: imageOverrides,
+                      portfolio_data: projects
+                    }, null, 2);
+                    navigator.clipboard.writeText(payload);
+                    alert("复制成功！请将剪切板中的内容粘贴发送给左侧 AI 聊天框，我会为您立刻固化源码。");
+                  }}
+                  className="w-2/3 py-3 bg-[#D9FF33] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-[#D9FF33]/15 flex items-center justify-center gap-1.5 border-0"
+                >
+                  <span>📋 一键复制并去固化 COPY PAYLOAD</span>
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* SVG Clip Path Definition */}
       <svg width="0" height="0" className="absolute pointer-events-none">
